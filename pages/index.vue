@@ -85,7 +85,7 @@ export default {
         return
       }
 
-      axios.get(`http://api.tvmaze.com/search/shows?q=${ref.search}`)
+      axios.get(`https://api.tvmaze.com/search/shows?q=${ref.search}`)
         .then((response) => {
           const seriesInfo = response.data.map((serie) => {
             let description = ''

@@ -81,7 +81,7 @@ export default {
     getSerieEpisodes (serieId) {
       const ref = this
 
-      axios.get(`http://api.tvmaze.com/shows/${serieId}/episodes`)
+      axios.get(`https://api.tvmaze.com/shows/${serieId}/episodes`)
         .then((response) => {
           const epiInfo = response.data.map((epi) => {
             let description = ''
