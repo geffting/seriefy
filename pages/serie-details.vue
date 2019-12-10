@@ -3,7 +3,7 @@
     <HomeHeader />
     <v-container id="container-serie-details" fluid>
       <v-row justify="center">
-        <v-col cols="3">
+        <v-col cols="6" sm="4">
           <v-img :src="serieSrc" class="img-poster" />
         </v-col>
       </v-row>
@@ -15,7 +15,7 @@
       <v-row no-gutters>
         <v-col v-for="episode in episodeList" :key="episode.id" @click="goToEpisode(episode.id)" cols="12" class="serie-card">
           <v-card color="#6cb0b8" elevation="10">
-            <div class="d-flex flex-no-wrap justify-space-between">
+            <div class="d-flex flex-column-reverse flex-md-row flex-no-wrap justify-space-between">
               <div>
                 <v-card-title
                   v-text="episode.title"
@@ -24,7 +24,7 @@
                 <v-card-subtitle v-text="episode.description" />
               </div>
               <v-avatar
-                class="ma-3"
+                class="avatar"
                 size="150"
               >
                 <v-img :src="episode.src" />
@@ -129,6 +129,16 @@ export default {
 
 .img-poster {
   border-radius: 10px
+}
+
+.avatar {
+  margin: 15px auto 0 auto;
+}
+
+@media (min-width: 960px) {
+  .avatar {
+    margin: 15px;
+  }
 }
 
 </style>

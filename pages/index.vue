@@ -3,7 +3,7 @@
     <HomeHeader />
     <v-container id="main-content" fluid>
       <v-row align="center" justify="start" no-gutters>
-        <v-col cols="8">
+        <v-col cols="12" sm="8">
           <v-text-field
             v-model="search"
             outlined
@@ -11,7 +11,7 @@
             color="black"
           />
         </v-col>
-        <v-col cols="1">
+        <v-col cols="12" sm="2">
           <v-btn
             @click="findSerie"
             class="btn-search"
@@ -26,7 +26,7 @@
       <v-row v-if="seriesList.length > 0" no-gutters>
         <v-col v-for="serie in seriesList" :key="serie.id" @click="goToSerie(serie.id, serie.title, serie.src)" cols="12" class="serie-card">
           <v-card color="#6cb0b8" elevation="10">
-            <div class="d-flex flex-no-wrap justify-space-between">
+            <div class="d-flex flex-column-reverse flex-md-row flex-no-wrap justify-space-between">
               <div>
                 <v-card-title
                   v-text="serie.title"
@@ -35,7 +35,7 @@
                 <v-card-subtitle v-text="serie.description" />
               </div>
               <v-avatar
-                class="ma-3"
+                class="avatar"
                 size="300"
               >
                 <v-img :src="serie.src" />
@@ -141,6 +141,23 @@ a {
 .serie-card {
   cursor: pointer;
   margin: 10px 0px;
+}
+
+.avatar {
+  margin: 15px auto 0 auto;
+}
+
+@media (min-width: 960px) {
+  .avatar {
+    margin: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  #main-content .btn-search {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
 }
 
 </style>

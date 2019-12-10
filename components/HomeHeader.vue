@@ -1,7 +1,7 @@
 <template>
   <v-container id="main-header" fluid>
     <v-row id="header-item" justify="start">
-      <v-col @click="goHome" cols="1" class="icon-home">
+      <v-col @click="goHome" xl="1" sm="1" class="icon-home">
         <v-row justify="center">
           <v-icon
             class="site-icon"
