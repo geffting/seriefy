@@ -1,6 +1,6 @@
 # seriefy
 
-> an app to view the details about some series
+> an app to view the details about some series. Netlify link: https://brave-golick-c67abd.netlify.com/
 
 ## Build Setup
 
@@ -20,3 +20,4 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
